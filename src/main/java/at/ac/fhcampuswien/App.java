@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
 
+import java.util.Scanner;
+
 public class App {
 
     //todo Task 1
@@ -9,7 +11,16 @@ public class App {
 
     //todo Task 2
     public void helloRobot(){
-        // input your solution here
+        System.out.println( "0123456789012345678901" );
+        System.out.println( "         __" );
+        System.out.println( " _(\\    |@@|" );
+        System.out.println( "(__/\\__ \\--/ __" );
+        System.out.println( "   \\___|----|  |   __" );
+        System.out.println( "       \\ }{ /\\ )_ / _\\" );
+        System.out.println( "       /\\__/\\ \\__O (__" );
+        System.out.println( "      (--/\\--)    \\__/" );
+        System.out.println( "      _)(  )(_" );
+        System.out.println( "     `---''---`" );
     }
 
     //todo Task 3
@@ -19,7 +30,13 @@ public class App {
 
     //todo Task 4
     public void addTwoNumbers(){
-        // input your solution here
+        int num1;
+        int num2;
+
+        Scanner scanner = new Scanner( System.in );
+        num1 = scanner.nextInt();
+        num2 = scanner.nextInt();
+        System.out.println( ( num1 + num2 ) );
     }
 
     //todo Task 5
