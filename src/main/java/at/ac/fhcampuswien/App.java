@@ -28,14 +28,14 @@ public class App {
         char literal_char = 'Z';
         int literal_int_oct = 012;
         long literal_long = 80L;
-        double literal_double_e_num = 44e-1f;
-        float literal_float = 5.5f;
-        double literal_double_e_num2 = 8.88e1;
+        float literal_float = 44e-1f;
+        float literal_float2 = 5.5f;
+        double literal_double_e_num = 8.88e1;
         int literal_int_hex = 0xface;
         double literal_double = 99.9;
 
-        int sum = (int)literal_char + literal_int_oct + (int)literal_long + (int)literal_double_e_num +
-                (int)literal_float + (int)literal_double_e_num2 + literal_int_hex + (int)literal_double;
+        int sum = (int)literal_char + literal_int_oct + (int)literal_long + (int)literal_float +
+                (int)literal_float2 + (int)literal_double_e_num + literal_int_hex + (int)literal_double;
 
         System.out.println( sum );
     }
