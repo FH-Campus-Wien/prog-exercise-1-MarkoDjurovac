@@ -25,7 +25,19 @@ public class App {
 
     //todo Task 3
     public void sumOfLiterals(){
-        // input your solution here
+        char literal_char = 'Z';
+        int literal_int_oct = 012;
+        long literal_long = 80L;
+        double literal_double_e_num = 44e-1f;
+        float literal_float = 5.5f;
+        double literal_double_e_num2 = 8.88e1;
+        int literal_int_hex = 0xface;
+        double literal_double = 99.9;
+
+        int sum = (int)literal_char + literal_int_oct + (int)literal_long + (int)literal_double_e_num +
+                (int)literal_float + (int)literal_double_e_num2 + literal_int_hex + (int)literal_double;
+
+        System.out.println( sum );
     }
 
     //todo Task 4
@@ -46,12 +58,57 @@ public class App {
 
     //todo Task 6
     public void compareTwoNumbers(){
-        // input your solution here
+        int n1;
+        int n2;
+        Scanner scanner = new Scanner( System.in );
+
+        System.out.print( "n1: " );
+        n1 = scanner.nextInt();
+        System.out.print( "n2: " );
+        n2 = scanner.nextInt();
+
+        if( n1 > n2 )
+        {
+            System.out.println( "n1 > n2" );
+        }
+        else if( n2 > n1 )
+        {
+            System.out.println( "n2 > n1" );
+        }
+        else
+        {
+            System.out.println("n1 == n2");
+        }
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
-        // input your solution here
+        int revenue;
+        Scanner scanner = new Scanner( System.in );
+
+        System.out.print( "Enter annual Revenue: " );
+        revenue = scanner.nextInt();
+
+        if( revenue < 0 || revenue >= 100000 )
+        {
+            System.out.println( "Invalid Revenue" );
+        }
+        else if( revenue >= 0 && revenue < 20000 )
+        {
+            System.out.println( "Poor Sales Revenue" );
+        }
+        else if( revenue >= 20000 && revenue < 50000 )
+        {
+            System.out.println( "Average Sales Revenue" );
+        }
+        else if( revenue >= 50000 && revenue < 80000 )
+        {
+            System.out.println( "Good Sales Revenue" );
+        }
+        else
+        {
+            System.out.println( "Excellent Sales Revenue" );
+        }
     }
 
     //todo Task 8
