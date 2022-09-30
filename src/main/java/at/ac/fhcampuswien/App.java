@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class App {
 
-    //todo Task 1
     public void sayHelloWorld(){
         System.out.println( "Hello World!" );
     }
 
-    //todo Task 2
     public void helloRobot(){
         System.out.println( "0123456789012345678901" );
         System.out.println( "         __" );
@@ -23,7 +21,6 @@ public class App {
         System.out.println( "     `---''---`" );
     }
 
-    //todo Task 3
     public void sumOfLiterals(){
         char literal_char = 'Z';
         int literal_int_oct = 012;
@@ -40,7 +37,6 @@ public class App {
         System.out.println( sum );
     }
 
-    //todo Task 4
     public void addTwoNumbers(){
         int num1;
         int num2;
@@ -51,7 +47,6 @@ public class App {
         System.out.println( ( num1 + num2 ) );
     }
 
-    //todo Task 5
     public void swapTwoNumbers(){
         int x;
         int y;
@@ -78,7 +73,6 @@ public class App {
         System.out.println( "y: " + y );
     }
 
-    //todo Task 6
     public void compareTwoNumbers(){
         int n1;
         int n2;
@@ -100,7 +94,6 @@ public class App {
         }
     }
 
-    //todo Task 7
     public void ratingSalesPerson(){
         int revenue;
         Scanner scanner = new Scanner( System.in );
@@ -125,7 +118,6 @@ public class App {
         }
     }
 
-    //todo Task 8
     public void getCommissionRate(){
         int commissionClass;
         float commissionRate;
@@ -148,7 +140,6 @@ public class App {
         }
     }
 
-    //todo Task 9
     public void leapyear(){
         int year;
         Scanner scanner = new Scanner( System.in );
@@ -164,7 +155,6 @@ public class App {
         }
     }
 
-    //todo Task 10
     public void transposedNumbers(){
         System.out.print( "Number: " );
         Scanner scanner = new Scanner( System.in );
