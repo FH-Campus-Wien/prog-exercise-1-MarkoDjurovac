@@ -44,8 +44,8 @@ public class App {
     public void addTwoNumbers(){
         int num1;
         int num2;
-
         Scanner scanner = new Scanner( System.in );
+
         num1 = scanner.nextInt();
         num2 = scanner.nextInt();
         System.out.println( ( num1 + num2 ) );
@@ -53,7 +53,29 @@ public class App {
 
     //todo Task 5
     public void swapTwoNumbers(){
-        // input your solution here
+        int x;
+        int y;
+        Scanner scanner = new Scanner( System.in );
+
+        System.out.println( "Before Swap:" );
+        System.out.print( "x: " );
+        x = scanner.nextInt();
+        System.out.print( "y: " );
+        y = scanner.nextInt();
+
+        /*
+         * XOR-Swapping:
+         * e.g. x = 3, y = 4 -> x = 3 ^ 4 = 7
+         * y = x ^ y = 7 ^ 4 = 3 -> y = 3
+         * x = x ^ y = 7 ^ 3 = 4 -> x = 4
+         */
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
+
+        System.out.println( "After Swap:" );
+        System.out.println( "x: " + x );
+        System.out.println( "y: " + y );
     }
 
     //todo Task 6
@@ -67,17 +89,14 @@ public class App {
         System.out.print( "n2: " );
         n2 = scanner.nextInt();
 
-        if( n1 > n2 )
-        {
+        if( n1 > n2 ){
             System.out.println( "n1 > n2" );
         }
-        else if( n2 > n1 )
-        {
+        else if( n2 > n1 ){
             System.out.println( "n2 > n1" );
         }
-        else
-        {
-            System.out.println("n1 == n2");
+        else{
+            System.out.println( "n1 == n2" );
         }
     }
 
@@ -89,41 +108,86 @@ public class App {
         System.out.print( "Enter annual Revenue: " );
         revenue = scanner.nextInt();
 
-        if( revenue < 0 || revenue >= 100000 )
-        {
+        if( revenue < 0 || revenue >= 100000 ){
             System.out.println( "Invalid Revenue" );
         }
-        else if( revenue >= 0 && revenue < 20000 )
-        {
+        else if( revenue >= 0 && revenue < 20000 ){
             System.out.println( "Poor Sales Revenue" );
         }
-        else if( revenue >= 20000 && revenue < 50000 )
-        {
+        else if( revenue >= 20000 && revenue < 50000 ){
             System.out.println( "Average Sales Revenue" );
         }
-        else if( revenue >= 50000 && revenue < 80000 )
-        {
+        else if( revenue >= 50000 && revenue < 80000 ){
             System.out.println( "Good Sales Revenue" );
         }
-        else
-        {
+        else{
             System.out.println( "Excellent Sales Revenue" );
         }
     }
 
     //todo Task 8
     public void getCommissionRate(){
-        // input your solution here
+        int commissionClass;
+        float commissionRate;
+        Scanner scanner = new Scanner( System.in );
+
+        System.out.print( "Enter CommissionClass: ");
+        commissionClass = scanner.nextInt();
+
+        switch( commissionClass ){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                commissionRate = (float)commissionClass / 100;
+                System.out.println( "Your Commission Rate was set to " + commissionRate );
+                break;
+            default:
+                System.out.println( "Your Commission Rate was set to 0.0" );
+                break;
+        }
     }
 
     //todo Task 9
     public void leapyear(){
-        // input your solution here
+        int year;
+        Scanner scanner = new Scanner( System.in );
+
+        System.out.print( "Year: ");
+        year = scanner.nextInt();
+
+        if( ( year % 4 == 0 ) && ( year % 100 != 0 ) || ( year % 400 == 0 ) ){
+            System.out.println( "Leapyear" );
+        }
+        else{
+            System.out.println( "Not a Leapyear" );
+        }
     }
 
     //todo Task 10
     public void transposedNumbers(){
-        // input your solution here
+        System.out.print( "Number: " );
+        Scanner scanner = new Scanner( System.in );
+
+        int number = scanner.nextInt();
+        int numberReversed = 0;
+
+        while( number != 0){
+            // get last digit from number, e.g. 456 % 10 = 6
+            int digit = number % 10;
+
+            /*
+             * multiply by 10 to get a zero next to number
+             * e.g. number = 45, numberReversed = 6, digit = 5
+             * -> 6 * 10 + 5 = 65
+             */
+            numberReversed = numberReversed * 10 + digit;
+
+            // dividing by 10 removes the last digit, e.g. 456 -> 45
+            number /= 10;
+        }
+
+        System.out.println( numberReversed );
     }
 
 
